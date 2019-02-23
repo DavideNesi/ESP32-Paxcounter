@@ -13,6 +13,10 @@ function Converter(decoded, port) {
       converted.longitude /= 1000000;
     }
   }
+  
+  if(port === 8){
+    converted.battery /=1000;
+  }
 
   return converted;
 }
