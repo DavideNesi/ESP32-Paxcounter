@@ -10,7 +10,7 @@ function Decoder(bytes, port) {
     if (bytes.length >= 2) {
     decoded.wifi = (bytes[i++] << 8) | bytes[i++];}
     
-    if (bytes.length >= 4) {
+    if (bytes.length === 4 || bytes.length > 15) {
     decoded.ble = (bytes[i++] << 8) | bytes[i++];}
 
     if (bytes.length > 4) {
